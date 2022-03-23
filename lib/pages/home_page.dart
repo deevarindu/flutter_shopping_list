@@ -6,8 +6,8 @@ class HomePage extends StatelessWidget {
   HomePage({Key? key}) : super(key: key);
 
   final List<Item> items = [
-    Item(name: 'Sugar', price: 5000),
-    Item(name: 'Salt', price: 2000),
+    Item(name: 'Sugar', price: 5000, img: 'assets/images/sugar.jpg'),
+    Item(name: 'Salt', price: 2000, img: 'assets/images/salt.jpg'),
   ];
 
   @override

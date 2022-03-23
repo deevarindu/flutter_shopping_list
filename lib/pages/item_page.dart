@@ -12,8 +12,15 @@ class ItemPage extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Shopping List"),
       ),
-      body: Center(
-        child: Text(itemArgs.name + " with " + itemArgs.price.toString()),
+      body: SingleChildScrollView(
+        child: Container(
+          margin: const EdgeInsets.all(8),
+          child: Column(
+            children: [
+              Image.asset(itemArgs.img),
+            ],
+          ),
+        ),
       ),
     );
   }
