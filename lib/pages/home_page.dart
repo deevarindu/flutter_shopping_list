@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../models/item.dart';
+import '../widgets/widgets.dart';
 
 class HomePage extends StatelessWidget {
   HomePage({Key? key}) : super(key: key);
@@ -27,22 +28,7 @@ class HomePage extends StatelessWidget {
               onTap: () {
                 Navigator.pushNamed(context, '/item', arguments: item);
               },
-              child: Card(
-                child: Container(
-                  margin: const EdgeInsets.all(8),
-                  child: Row(
-                    children: [
-                      Expanded(
-                        child: Text(item.name),
-                      ),
-                      Expanded(
-                        child: Text(item.price.toString(),
-                            textAlign: TextAlign.end),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
+              child: ListItemCard(item: item),
             );
           },
         ),
